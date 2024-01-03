@@ -54,7 +54,7 @@ public extension ImageCompress {
 }
 
 extension Data {
-    var imageFormat: ImageCompress.ImageFormat? {
+    public var imageFormat: ImageCompress.ImageFormat? {
         guard count >= 8 else {
             return nil
         }
@@ -110,7 +110,7 @@ private extension Data {
 }
 
 extension ImageCompress.ImageFormat {
-    var uniformTypeIdentifer: String {
+    public var uniformTypeIdentifer: String {
         switch self {
         case .heic:
             return AVFileType.heic.rawValue
